@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/tailwind.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Citas-PJCDMX</title>
+    </head>
+<body>
+  <body
+  style="background-image: url('img/bgPJCDMX.png'); background-size: contain; background-position: center center; background-repeat: no-repeat;"
+  class="bg-sky-900 h-screen flex items-center justify-center">
+  <!-- Buttons -->
+
+  <div class="flex flex-col items-center transition duration-300" id="asuntosCont">
+    <div class="mb-20 flex">
+      <!-- Botón Ingresar Asunto -->
+      <div class="mr-2">
+        <button id="btnNuevoAsunto" class="w-full bg-transparent border border-white text-white uppercase font-bold px-14 py-3 rounded transition duration-300 focus:outline-none glassGreen">
+          <p class="mb-3">NUEVO <br>ASUNTO</p>
+          <div class="flex items-center justify-center">
+            <img src="img/oficiliaDePartespng.png" style="width: 60px; height: 70px" alt="Imagen de Archivos">
+          </div>
+        </button>
+      </div>
+  
+      <!-- Botón Registrar Promoción -->
+      <div>
+        <button id="btnNuevaPromocion" class="w-full bg-transparent border border-white text-white uppercase font-bold px-10 py-3 rounded transition duration-300 focus:outline-none glassGreen">
+          <p class="mb-3"> NUEVA <br>PROMOCIÓN </p>
+          <div class="flex items-center justify-center">
+            <img src="img/oficiliaDePartespng.png" style="width: 60px; height: 70px" alt="Imagen de Archivos">
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Nuevo Asunto-->
+  <div id="modalNuevoAsunto" class="modal hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+    <div class="modal-content bg-white w-1/2 p-4 rounded">
+      <!-- Contenido del modal -->
+      <h2 class="text-2xl font-bold mb-4">Nuevo Asunto</h2>
+      <form id="formNuevoAsunto" class="flex flex-col">
+        <label for="nombre" class="mb-2">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="border p-2 mb-4" required>
+  
+        <label for="email" class="mb-2">Correo electrónico:</label>
+        <input type="email" id="email" name="email" class="border p-2 mb-4" required>
+  
+        <!-- Agrega más campos del formulario según tus necesidades -->
+  
+      </form>
+      
+      <button id="btnCerrarModalAsunto" class="bg-red-500 text-white px-4 py-2 mt-4 rounded">Cerrar</button>
+      <button id="btnEnviarAsunto" type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Enviar</button>
+    </div>
+  </div>
+  
+  <!-- Modal Nueva Promoción-->
+  <div id="modalNuevaPromocion" class="modal hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+    <div class="modal-content bg-white w-1/2 p-4 rounded">
+      <!-- Contenido del modal -->
+      <h2 class="text-2xl font-bold mb-4">Nueva Promoción</h2>
+      <form id="formNuevaPromocion" class="flex flex-col">
+        <label for="nombre" class="mb-2">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="border p-2 mb-4" required>
+  
+        <label for="email" class="mb-2">Correo electrónico:</label>
+        <input type="email" id="email" name="email" class="border p-2 mb-4" required>
+  
+        <!-- Agrega más campos del formulario según tus necesidades -->
+  
+      </form>
+      
+      <button id="btnCerrarModalPromocion" class="bg-red-500 text-white px-4 py-2 mt-4 rounded">Cerrar</button>
+      <button id="btnEnviarPromocion" type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Enviar</button>
+    </div>
+  </div>
+
+
+
+
+
+      <div class="navigation">
+          <ul>
+
+            <li class="list">
+              <a href="#" id="inicio">
+                <span class="icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="text">INCIO</span>
+              </a>
+            </li>
+
+            <li class="list active">
+              <a href="#" id="oficialia">
+                <span class="icon">
+                  <ion-icon name="id-card-outline"></ion-icon>
+                </span>
+                <span class="text">OFICIALÍA DE PARTES</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="expedientes">
+                <span class="icon">
+                  <ion-icon name="file-tray-full-outline"></ion-icon>
+                </span>
+                <span class="text">MIS EXPEDIENTES</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="citas">
+                <span class="icon">
+                  <ion-icon name="today-outline"></ion-icon>
+                </span>
+                <span class="text">CITAS</span>
+              </a>
+            </li>
+            <li class="list" >
+              <a href="#" id="audiencias">
+                <span class="icon">
+                  <ion-icon name="people-outline"></ion-icon>
+                </span>
+                <span class="text">MIS AUDIENCIAS</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#"  id="servicios">
+                <span class="icon">
+                  <ion-icon name="library-outline"></ion-icon>
+                </span>
+                <span class="text">SERVICIOS</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="notificaciones">
+                <span class="icon">
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </span>
+                <span class="text">MIS NOTIFICACIONES</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="despacho">
+                <span class="icon">
+                  <ion-icon name="business-outline"></ion-icon>
+                </span>
+                <span class="text">MI DESPACHO</span>
+              </a>
+            </li>
+            <div class="indicator"></div>
+          </ul>
+      </div>
+
+      <script src="js/app.js"></script>
+      <script src="js/general.js"></script>
+      <script src="js/modals.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</body>
+
+
+</html>

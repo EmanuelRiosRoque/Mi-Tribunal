@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/tailwind.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Citas-PJCDMX</title>
+    </head>
+<body>
+  <body
+  style="background-image: url('img/bgPJCDMX.png'); background-size: contain; background-position: center center; background-repeat: no-repeat;"
+  class="bg-sky-900 h-screen flex items-center justify-center">
+  <!-- Buttons -->
+
+        <!-- Buttons Oficialia -->
+        <div class="grid grid-cols-2 gap-4" style="max-height: 90vh; overflow-y: auto;">
+              <!-- Botón Ingresar -->
+              <div class="mr-2">
+                  <button id="nuevoAsunto"
+                          class="w-full bg-transparent border border-white text-white uppercase font-bold  py-3 rounded transition duration-300 focus:outline-none glassGreen">
+                          <p class="mb-3">PLATAFORMA INTEGRAL DE <br> COBRO</p>
+                          <div class="flex items-center justify-center">
+                            <img src="img/PIC.png" style="width: 130px; height: 80px" alt="Imagen de Archivos">
+                          </div>
+                  </button>
+              </div>
+
+              <!-- Botón Registrar -->
+              <div>
+                  <button id="nuevaPromo"
+                          class="w-full bg-transparent border border-white text-white uppercase font-bold  py-6 rounded transition duration-300 focus:outline-none glassGreen">
+                          <p class="mb-3">PAQUETES DE <br>SEGUIMIENTO</p>
+                          <div class="flex items-center justify-center">
+                            <img src="img/SICOR.png" style="width: 130px; height: 80px" alt="Imagen de Archivos">
+                          </div>
+                  </button>
+              </div>
+              <div>
+                <button id="nuevaPromo"
+                        class="w-full bg-transparent border border-white text-white uppercase font-bold py-5 rounded transition duration-300 focus:outline-none glassGreen">
+                        <p class="mb-10">REGISTRO DE</p>
+                        <div class="flex items-center justify-center">
+                          <img src="img/cedulaa.png" style="width: 130px; height: 80px" alt="Imagen de Archivos">
+                        </div>
+                </button>
+            </div>
+
+
+            <div class="mr-2">
+              <button id="nuevoAsunto"
+                      class="w-full bg-transparent border border-white text-white uppercase font-bold  py-3 rounded transition duration-300 focus:outline-none glassGreen">
+                      <p class="mb-3">SERVICIO DE  <br>ALERTAS DE  <br> DEMANDA</p>
+                      <div class="flex items-center justify-center">
+                        <img src="img/sad.png" style="width: 130px; height: 80px" alt="Imagen de Archivos">
+                      </div>
+              </button>
+          </div>
+          </div>
+        </div>
+        <!--End Buttons Oficialia -->
+
+      <div id="contenedor" class="glassGreen mb-48">
+
+        <div id="btnBack" class="hidden max-w-md mx-auto mb-4 ml-auto transition duration-300 focus:outline-none">
+            <button>
+                <img src="svg/back-svgrepo-com.svg" class="block" alt="Boton Regresar">
+            </button>
+        </div>
+
+        <!-- Form  Oficialia-->
+        <div class="mb-28 w-full hidden transition duration-300  py-24 px-10" id="form-nuevo-asunto">
+            <div id="btnBack" class="hidden max-w-md mx-auto ml-auto transition duration-300 focus:outline-none">
+            </div>
+                <form id="loginForm">
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="">
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-transparent leading-tight focus:outline-none focus:shadow-outline"
+                            id="" type="text" name="" placeholder="">
+                    </div>
+
+
+                    <div class="flex items-center justify-between">
+                        <button id="submitAsunto"
+                            class="w-full mt-4 bg-transparent border border-white text-white uppercase font-bold px-10 py-3 rounded transition duration-300 focus:outline-none shadowScan"
+                            type="submit">
+                            Enviar Nuevo Asunto
+                        </button>
+                    </div>
+                </form>
+        </div>
+
+        <div class="mb-28 w-full hidden transition duration-300  py-24 px-10" id="form-nueva-promo">
+                <form id="loginForm">
+                    <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="">
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-transparent leading-tight focus:outline-none focus:shadow-outline"
+                            id="" type="text" name="" placeholder="">
+                    </div>
+
+
+                    <div class="flex items-center justify-between">
+                        <button id="submitAsunto"
+                            class="w-full mt-4 bg-transparent border border-white text-white uppercase font-bold px-10 py-3 rounded transition duration-300 focus:outline-none shadowScan"
+                            type="submit">
+                            Enviar Nuevo Asunto
+                        </button>
+                    </div>
+                </form>
+        </div>
+        <!--End Form Oficialia -->
+
+
+      </div>
+
+      <div class="navigation">
+          <ul>
+            <li class="list">
+              <a href="#" id="inicio">
+                <span class="icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="text">INCIO</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="oficialia">
+                <span class="icon">
+                  <ion-icon name="id-card-outline"></ion-icon>
+                </span>
+                <span class="text">OFICIALÍA DE PARTES</span>
+              </a>
+            </li>
+            <li class="list ">
+              <a href="#" id="expedientes">
+                <span class="icon">
+                  <ion-icon name="file-tray-full-outline"></ion-icon>
+                </span>
+                <span class="text">MIS EXPEDIENTES</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="citas">
+                <span class="icon">
+                  <ion-icon name="today-outline"></ion-icon>
+                </span>
+                <span class="text">CITAS</span>
+              </a>
+            </li>
+            <li class="list ">
+              <a href="#" id="audiencias">
+                <span class="icon">
+                  <ion-icon name="people-outline"></ion-icon>
+                </span>
+                <span class="text">MIS AUDIENCIAS</span>
+              </a>
+            </li>
+            <li class="list active">
+              <a href="#"  id="servicios">
+                <span class="icon">
+                  <ion-icon name="library-outline"></ion-icon>
+                </span>
+                <span class="text">SERVICIOS</span>
+              </a>
+            </li>
+            <li class="list ">
+              <a href="#" id="notificaciones">
+                <span class="icon">
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </span>
+                <span class="text">MIS NOTIFICACIONES</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="despacho">
+                <span class="icon">
+                  <ion-icon name="business-outline"></ion-icon>
+                </span>
+                <span class="text">MI DESPACHO</span>
+              </a>
+            </li>
+            <div class="indicator"></div>
+          </ul>
+      </div>
+
+      <script src="js/app.js"></script>
+      <script src="js/general.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</body>
+
+
+</html>

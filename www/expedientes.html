@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/tailwind.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Citas-PJCDMX</title>
+    </head>
+<body>
+  <body
+  style="background-image: url('img/bgPJCDMX.png'); background-size: contain; background-position: center center; background-repeat: no-repeat;"
+  class="bg-sky-900 h-screen flex items-center justify-center">
+  <!-- Buttons -->
+
+    <div class="grid grid-cols-2 gap-4 mb-32">
+      <!-- Botón 1 -->
+      <button id="nuevoExpediente" class="w-full bg-transparent border border-white text-white uppercase font-bold px-10 py-3 rounded transition duration-300 focus:outline-none glassGreen">
+          <p class="mb-3">NUEVO <br>EXPEDIENTE</p>
+          <div class="flex items-center justify-center">
+              <img src="svg/plus.svg" style="width: 60px; height: 70px" alt="Imagen de Archivos">
+          </div>
+      </button>
+
+      <!-- Botón 2 -->
+      <button id="expediente1" class="btn-expediente w-full bg-transparent border border-white text-white uppercase font-bold px-10 py-3 rounded transition duration-300 focus:outline-none glassGreen">
+          <p class="mb-3">001/2024</p>
+          <div class="flex items-center justify-center">
+              <img src="img/expedientespng.png" style="width: 100px; height: 70px" alt="Imagen de Archivos">
+          </div>
+      </button>
+
+      <!-- Botón 3 -->
+      <button id="expediente2" class="btn-expediente w-full bg-transparent border border-white text-white uppercase font-bold px-10 py-3 rounded transition duration-300 focus:outline-none glassGreen">
+          <p class="mb-3">002/2024</p>
+          <div class="flex items-center justify-center">
+              <img src="img/expedientespng.png" style="width: 100px; height: 70px" alt="Imagen de Archivos">
+          </div>
+      </button>
+
+      <!-- Botón 4 -->
+      <button id="expediente3" class="btn-expediente w-full bg-transparent border border-white text-white uppercase font-bold px-10 py-3 rounded transition duration-300 focus:outline-none glassGreen">
+          <p class="mb-3">003/2024</p>
+          <div class="flex items-center justify-center">
+              <img src="img/expedientespng.png" style="width: 100px; height: 70px" alt="Imagen de Archivos">
+          </div>
+      </button>
+    </div>
+
+      
+
+
+    <div id="modalNuevoExpediente" class="modal hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+      <div class="modal-content bg-white w-full p-4 rounded">
+        <h2 class="text-2xl font-bold mb-4">Nuevo Expediente</h2>
+        <form id="formNuevoExpediente" class="flex flex-col">
+          <label for="nombreExpediente" class="mb-2">Numero del Expediente:</label>
+          <input type="text" id="nombreExpediente" name="nombreExpediente" class="border p-2 mb-4" required>
+    
+
+          <label for="nombreExpediente" class="mb-2">Celular De Su Representado(s):</label>
+          <input type="tel" max="10" id="celularRepresentado" name="celularRepresentado" class="border p-2 mb-4" required>
+
+          <label for="nombreExpediente" class="mb-2">Correo De Su Representado(s):</label>
+          <input type="email" id="correoRepresentado" name="correoRepresentado" class="border p-2 mb-4" required>
+
+
+        </form>
+    
+        <button id="btnCerrarModalNuevoExpediente" class="bg-red-500 text-white px-4 py-2 mt-4 rounded">Cerrar</button>
+        <button id="btnGuardarNuevoExpediente" class="bg-blue-500 text-white px-4 py-2 rounded">Guardar</button>
+      </div>
+    </div>
+
+
+    <div id="modalExpediente" class="modal hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+      <div class="modal-content bg-white w-full p-4 rounded">
+        <h2 class="text-2xl font-bold mb-4">Detalles del Expediente</h2>
+        <!-- Contenido específico del expediente -->
+        <div id="modalContent" class="mb-4 flex flex-col">
+
+          <label for="resolucionesExpe" class="mb-2">Resoluciones:</label>
+          <input type="text" id="resolucionesExpe" name="resolucionesExpe" class="border p-2 mb-4" readonly disabled>
+    
+
+          <label for="promocionesExpe" class="mb-2">Promociones:</label>
+          <input type="text" id="promocionesExpe" name="promocionesExpe" class="border p-2 mb-4" readonly disabled>
+
+          <label for="expeDigital" class="mb-2">Expediente digital:</label>
+          <a  href="https://www.poderjudicialcdmx.gob.mx/wp-content/uploads/LPN_003_ANEXO_A_1_20.pdf" class="border text-center p-2 mb-4 text-black rounded">Ver Expediente</a>
+          
+          <div class="flex flex-col items-center justify-center">
+            <img src="img/QRejemplo.jpg" style="width: 150px;" />
+          </div>
+          
+        </div>
+        <button id="btnCerrarModalExpediente" class="bg-red-500 text-white px-4 py-2 mt-4 rounded">Cerrar</button>
+      </div>
+    </div>
+
+      <div class="navigation">
+          <ul>
+            <li class="list">
+              <a href="#" id="inicio">
+                <span class="icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="text">INCIO</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="oficialia">
+                <span class="icon">
+                  <ion-icon name="id-card-outline"></ion-icon>
+                </span>
+                <span class="text">OFICIALÍA DE PARTES</span>
+              </a>
+            </li>
+            <li class="list active">
+              <a href="#" id="expedientes">
+                <span class="icon">
+                  <ion-icon name="file-tray-full-outline"></ion-icon>
+                </span>
+                <span class="text">MIS EXPEDIENTES</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="citas">
+                <span class="icon">
+                  <ion-icon name="today-outline"></ion-icon>
+                </span>
+                <span class="text">CITAS</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="audiencias">
+                <span class="icon">
+                  <ion-icon name="people-outline"></ion-icon>
+                </span>
+                <span class="text">MIS AUDIENCIAS</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#"  id="servicios">
+                <span class="icon">
+                  <ion-icon name="library-outline"></ion-icon>
+                </span>
+                <span class="text">SERVICIOS</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="notificaciones">
+                <span class="icon">
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </span>
+                <span class="text">MIS NOTIFICACIONES</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" id="despacho">
+                <span class="icon">
+                  <ion-icon name="business-outline"></ion-icon>
+                </span>
+                <span class="text">MI DESPACHO</span>
+              </a>
+            </li>
+            <div class="indicator"></div>
+          </ul>
+      </div>
+
+      
+      <script src="js/app.js"></script>
+      <script src="js/general.js"></script>
+      <script src="js/modalExpe.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</body>
+
+
+</html>
